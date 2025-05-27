@@ -1,0 +1,2 @@
+docker run -d --name bs-db -p 5432:5432 -e POSTGRES_DB=vm -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres postgres:14-alpine3.20
+docker pull postgres:14-alpine3.20

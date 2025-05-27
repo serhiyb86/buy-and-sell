@@ -1,0 +1,1 @@
+alter table if exists goodservice add column bar_code varchar(255);
