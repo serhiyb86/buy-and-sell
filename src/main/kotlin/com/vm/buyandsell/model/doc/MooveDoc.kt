@@ -17,7 +17,7 @@ abstract class MooveDoc(
     @ManyToOne(fetch = FetchType.EAGER)
     open var counterParty: CounterParty,
     open var docDate: LocalDateTime,
-    open var innerDocNumber: Int,
+    open var innerDocNumber: String,
     open var priceType: PriceType,
     open var payType: PayType,
     open var vat: VatType,

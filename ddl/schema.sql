@@ -1,0 +1,3 @@
+alter table if exists moove_doc alter column inner_doc_number set data type varchar(255);
+alter table if exists moove_doc alter column inner_doc_number set data type varchar(255);
+alter table if exists moove_doc alter column inner_doc_number set data type varchar(255);

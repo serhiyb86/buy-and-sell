@@ -13,7 +13,7 @@ class OutcomeDoc(
     id: Long,
     counterParty: CounterParty,
     docDate: LocalDateTime,
-    innerDocNumber: Int,
+    innerDocNumber: String,
     priceType: PriceType,
     payType: PayType,
     vat: VatType,
@@ -21,7 +21,6 @@ class OutcomeDoc(
     warehouse: Warehouse,
     cashier: Employee,
     goodsOrServices: List<GoodOrService>,
-    val supplierDocNumber: String
 ) : MooveDoc(id, counterParty, docDate, innerDocNumber, priceType, payType, vat, comment, warehouse, cashier, goodsOrServices) {
 
 }

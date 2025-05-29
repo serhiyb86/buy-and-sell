@@ -11,7 +11,7 @@ open class IncomeMoveDoc(
     id: Long,
     counterParty: CounterParty,
     docDate: LocalDateTime,
-    innerDocNumber: Int,
+    innerDocNumber: String,
     priceType: PriceType,
     payType: PayType,
     vat: VatType,
