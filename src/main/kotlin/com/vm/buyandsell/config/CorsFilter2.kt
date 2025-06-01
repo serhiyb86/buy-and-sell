@@ -1,13 +1,16 @@
 package com.vm.buyandsell.config
 
+import graphql.scalars.ExtendedScalars
+import graphql.schema.GraphQLScalarType
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.cors.CorsConfiguration
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource
 import org.springframework.web.filter.CorsFilter
 
+
 @Configuration
-class CorsFilter2 {
+class ConfigBeans {
 
     @Bean
     fun corsFilter(): CorsFilter {
@@ -20,4 +23,10 @@ class CorsFilter2 {
         source.registerCorsConfiguration("/**", config)
         return CorsFilter(source)
     }
+
+    @Bean
+    fun dateTimeScalar(): GraphQLScalarType {
+        return ExtendedScalars.DateTime
+    }
+
 }
