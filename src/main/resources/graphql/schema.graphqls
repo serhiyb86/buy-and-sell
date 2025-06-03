@@ -1,0 +1,50 @@
+type Query {
+  mooveDocs: [MooveDoc]
+    hello: String
+}
+
+type MooveDoc {
+      id: Int
+      counterParty: CounterParty
+      docDate: String
+      innerDocNumber: Int
+      priceType: PriceType
+      payType: PayType
+      vat: VatType
+      comment: String
+
+}
+
+type CounterParty {
+id: Int
+shortName: String
+fullName: String
+inn: String
+EDRPOU: String
+vatRegNumber: String
+phoneNumber: String
+type: CounterPartyType
+}
+
+enum CounterPartyType {
+ORG PERSON NOT_RESIDENT
+}
+
+enum VatType {
+NO_VAT
+VAT_20
+}
+
+enum PriceType {
+IN
+RETAIL
+B2B
+}
+
+enum PayType {
+CASH
+BANK_TRANSFER
+}
+
+
+
