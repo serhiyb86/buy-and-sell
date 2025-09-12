@@ -7,7 +7,7 @@ type MooveDoc {
       id: Int
       counterParty: CounterParty
       docDate: String
-      innerDocNumber: Int
+      innerDocNumber: String
       priceType: PriceType
       payType: PayType
       vat: VatType

@@ -19,7 +19,7 @@ data class MooveDocDTO(
     open var doctype: DocType,
     open var counterParty: CounterParty,
     open var docDate: String,
-    open var innerDocNumber: Int,
+    open var innerDocNumber: String,
     open var priceType: PriceType,
     open var payType: PayType,
     open var vat: VatType,
