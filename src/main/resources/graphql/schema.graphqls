@@ -1,49 +1,73 @@
 type Query {
-  mooveDocs: [MooveDoc]
+    mooveDocs: [MooveDoc]
     hello: String
 }
 
+type Mutation {
+    addCounterParty(cp: CounterPartyInput): CounterParty
+}
+
+input CounterPartyInput {
+
+    id: Int
+    shortName: String
+    fullName: String
+    inn: String
+    EDRPOU: String
+    vatRegNumber: String
+    phoneNumber: String
+    type: CounterPartyType
+    address: PersonAddressInput
+}
+
+input PersonAddressInput {
+    city: String
+    street: String
+    build: String
+    zip: String
+}
+
 type MooveDoc {
-      id: Int
-      counterParty: CounterParty
-      docDate: String
-      innerDocNumber: String
-      priceType: PriceType
-      payType: PayType
-      vat: VatType
-      comment: String
+    id: Int
+    counterParty: CounterParty
+    docDate: String
+    innerDocNumber: String
+    priceType: PriceType
+    payType: PayType
+    vat: VatType
+    comment: String
 
 }
 
 type CounterParty {
-id: Int
-shortName: String
-fullName: String
-inn: String
-EDRPOU: String
-vatRegNumber: String
-phoneNumber: String
-type: CounterPartyType
+    id: Int
+    shortName: String
+    fullName: String
+    inn: String
+    EDRPOU: String
+    vatRegNumber: String
+    phoneNumber: String
+    type: CounterPartyType
 }
 
 enum CounterPartyType {
-ORG PERSON NOT_RESIDENT
+    ORG PERSON NOT_RESIDENT
 }
 
 enum VatType {
-NO_VAT
-VAT_20
+    NO_VAT
+    VAT_20
 }
 
 enum PriceType {
-IN
-RETAIL
-B2B
+    IN
+    RETAIL
+    B2B
 }
 
 enum PayType {
-CASH
-BANK_TRANSFER
+    CASH
+    BANK_TRANSFER
 }
 
 

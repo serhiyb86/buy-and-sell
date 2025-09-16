@@ -15,7 +15,7 @@ data class CounterParty(
     val vatRegNumber: String,
     val phoneNumber: String,
     val type: CounterPartyType,
-    @ManyToOne(targetEntity = PersonAddress::class, cascade = [CascadeType.ALL])
+    @ManyToOne(targetEntity = PersonAddress::class, cascade = [CascadeType.ALL], fetch = FetchType.EAGER)
     val address: PersonAddress
 ) {
 
